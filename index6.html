@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>   
+        let body = document.body;   
+        body.innerHTML = "<!--" + body.tagName + "-->";   
+        alert( body.firstChild.data ); // будет выведено BODY в верхнем регистре, так как свойство tagName всегда в верхнем регистре. Этот комментарий является первым и единственным потомком body.firstChild. Значение data для комментария body.firstChild равно содержимому этого узла.
+    </script> 
+</body>
+</html>

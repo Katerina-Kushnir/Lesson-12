@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание №4. Подсчет потомков</title>
+</head>
+<body>
+    <ul>
+        <li>1
+            <ul>
+                <li>1.1</li>
+                <li>1.2</li>
+            </ul>
+        </li>
+        <li>2
+            <ul>
+                <li>2.1</li>
+                <li>2.2</li>
+            </ul>
+        </li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        let li = document.body.getElementsByTagName('li');
+        
+        for (let i = 0; i < li.length; i++) {
+            let num = li[i].getElementsByTagName('li').length;
+            let name = li[i].firstChild.data.trim();
+
+            alert(`${name}: ${num}`);
+        }
+    </script>
+</body>
+</html>
